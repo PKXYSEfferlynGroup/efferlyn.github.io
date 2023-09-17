@@ -5,7 +5,10 @@
 		<title>裕翎</title>
 		<link rel="shortcut icon" href="res/titleico.ico">
 		<style>
+			body {background: #C7EDFF}
 			.img_header img {margin: 30px;}
+			
+			.navg {margin-top:20px; margin-bottom:65px}
 			.navg ul {margin:0px;
 					  padding:0px;
 					  list-style: none;
@@ -19,6 +22,8 @@
 						 background-color:#00B6FF;}
 			.navg ul li a {text-align:center;color:white;display:block;padding:8px 16px;backgroud-color:#00B6FF;text-decoration: none;height:50px;line-height:32px}
 			.navg ul li a:hover {color:white;background-color:#0D7ECC}
+			
+			#colorico {position: absolute;width:130px;height:130px;right:60px;top:-10px}
 			
 			.banner {margin-top: 20px;align-items: center;display: flex;justify-content: center}
 			.banner .mp {width:600px; height:330px;z-index:1; border: 1px solid #9A9A9A}
@@ -37,8 +42,112 @@
 			.msg_ipt {width:200px;height:30px;margin:0px;border:3px solid #00B6FF;padding-left:5px;}
 			.msg_commit:enabled {color:white; width: 60px; height: 37px; margin:0px; border: none; background:none;background-color:#00B6FF; padding: 2px 2px; border-radius: 0px; position:absolute; box-shadow:none; outline:none}
 			.msg_commit:hover {background:#0D7ECC; border-color:#0D7ECC; box-shadow:none; outline:none}
-
 			
+			.main {
+				margin-top:30px;
+				margin-bottom:20px;
+				display:inline-block;
+			}
+			.news {
+				margin-left: 150px;
+			}
+			.news h2 {
+				background-image: url("res/waveheader.png");
+				background-repeat: no-repeat;
+				height:45px;
+				padding-left: 55px;
+				line-height: 36px;
+				
+			}
+			.news ul {
+				list-style-type: disc;
+			}
+			.news ul li {
+				width:360px;
+				background: #FFFFFF;
+				height:30px;
+				line-height: 30px;
+				border-radius:10px;
+				padding: 0px 20px;
+				border: 2px solid #e7e7e7;
+				margin: 10px 1px;
+			}
+			.news ul li a {
+				float:right;
+				right:10px;
+				text-decoration: none;
+			}
+			
+			.comment {
+				display: inline-block;
+				float:right;
+				margin-top:30px;
+				margin-right:150px;
+			}
+			.comment h2 {
+				background-image: url("res/yellowwaveheader.png");
+				background-repeat: no-repeat;
+				height:45px;
+				padding-left: 65px;
+				line-height: 36px;
+			}
+			.comment ul li {
+				width:360px;
+				background: #FFFFFF;
+				height:30px;
+				line-height: 30px;
+				border-radius:10px;
+				padding: 0px 20px;
+				border: 2px solid #e7e7e7;
+				margin: 10px 1px;
+			}
+			.coheader {
+				position:absolute;
+				width:25px;
+				top:548px;
+				left: 178px;
+				display:inline-block;
+			}
+			.coheaderR {
+				position:absolute;
+				width: 45px;
+				top:550px;
+				right:540px;
+			}
+			
+			.titletext {
+				justify-content: center;
+				align-items: center;
+				margin: 30px 5px;
+			}
+			.titletext h1 {
+				margin-left: auto;
+				align-self: center;
+				margin-right: auto;
+				background-attachment: local;
+				background-image: url("res/penheader1m.png");
+				background-repeat: no-repeat;
+				text-align: center;
+				height:180px;
+				background-position: 50% 00%;
+				line-height: 170px;
+				color:#F0FDFF;
+			}
+			.titletext .expl{
+				text-align: center;
+				margin: 10px 0px;
+				font-weight: 200;
+				line-height: 30px;
+				font-size: 17px
+			}
+			.titletext .fin {
+				text-align: right;
+				font-weight: 100;
+				font-size: 13px;
+				color: #707070;
+				font-style: italic;
+				margin-right: 180px;
+			}
 			.footer_div{align-items: center;display: flex; justify-content: center}
 			.fttx{color: grey;font-size: 11px;text-align: center}
 		</style>
@@ -52,10 +161,12 @@
 	<div class="navg">
 		<ul>
 		<li><a href="">首页</a></li>
-		<li><a href="">讯息</a></li>
-		<li><a href="">活动</a></li>
+		<li><a href="msglist.html">讯息</a></li>
+		<li><a href="activities.html">活动</a></li>
 		<li><a href="news_pages/beginningposters.html">关于我们</a></li>
 		</ul>
+		
+		<a href="news_pages/beginningposters.html"><img src="res/colorico.png" alt="关于我们" id="colorico"></a>
 	</div>
 	
 	<div class="banner" id="banner">
@@ -69,6 +180,36 @@
 		<li> </li>
 		</ul></div>
 	<script type="text/javascript" src="script/banner.js" ></script>
+	
+	<div class="main">
+	<div class="news">
+			<img class="coheader" src="res/msg.png">
+			<h2>最新讯息</h2>
+
+
+			<ul>
+			<li>2023-9-17 海报展示 <a href="news_pages/beginningposters.html">进入</a></li>
+			<li></li>
+			<li></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div class="comment">
+		<img class="coheaderR" src="res/msgboard.png">
+		<h2>留言板</h2>
+		<ul>
+			<li>功能尚未开启，敬请期待</li>
+						<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+	<div class="titletext">
+		<h1>华阴后裕，九霄今翎。</h1>
+		<p class="expl">我们现在已在高空翱翔<br>鸟类的羽毛丰满才能飞得远飞得高<br>毛羽不丰满者<br>不可以高飞<br>才学不充实者<br>不能任大事<br>现在的我们已能翱翔于天际<br>正是我们担起这份重任最好的证明</p>
+		<p class="fin">——10H3 陈浩盈</p>
+	</div>
 <!--
 	<div class="msg_board">
 
@@ -87,7 +228,8 @@
 <footer>
 	<hr class="baseline" />
 	<div align="left" class="footer_div">
-		<p class="fttx">co-worked by Lifragenxy and Efferlyn<br>copyright@github.com/lifragenxy, Efferlyn PKXYS, Shenzhen, China</p>
+		<p class="fttx">co-worked by Lifragenxy and Efferlyn<br>
+			copyright@github.com/lifragenxy, Efferlyn PKXYS, Shenzhen, China</p>
 	</div>
 	</footer>
 </body>
